@@ -1,0 +1,29 @@
+﻿<Window x:Class="Stupidity.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stupidity"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="300" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="40*"/>
+            
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Login" HorizontalAlignment="Center"  VerticalAlignment="Bottom"/>
+        <TextBox x:Name="textBox" Height="23" Grid.Row="1" TextWrapping="Wrap" Width="120"/>
+        <ComboBox x:Name="colorComboBox" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Width="120" SelectionChanged="colorComboBox_SelectionChanged"/>
+
+        <Label Content="git repo name" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="gitRepoTextBox" Height="23" Grid.Row="4" TextWrapping="Wrap" Width="120" VerticalAlignment="Center"/>
+        <Button x:Name="gitButton" Content="gitFile" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75" Click="gitButton_Click"/>
+        <Button x:Name="okButton" Content="login" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="okButton_Click"/>
+    </Grid>
+</Window>
