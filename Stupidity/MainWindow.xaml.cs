@@ -86,7 +86,7 @@ namespace Stupidity
                 string text = message.Item2;
                 Brush brush = (SolidColorBrush) new BrushConverter().ConvertFrom(message.Item1);
                 TextRange range = new TextRange(textBlock.Document.ContentEnd, textBlock.Document.ContentEnd);
-                range.Text = text + Environment.NewLine;
+                range.Text = text;
                 range.ApplyPropertyValue(TextElement.ForegroundProperty, brush);
             }
         }

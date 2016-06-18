@@ -157,15 +157,21 @@ namespace Stupidity
         private string PlayerMessage(string playerName)
         {
             StringBuilder message = new StringBuilder(playerName + ": ");
+            bool wasText = false;
             using (var file = File.OpenText(workDirectory + Path.DirectorySeparatorChar+ playerName+".txt"))
             {
                 file.ReadLine(); // skip color
                 var line = file.ReadLine();
                 while(line != null)
                 {
+                    wasText = true;
                     message.AppendLine(line);
                     line = file.ReadLine();
                 }
+            }
+            if (!wasText)
+            {
+                message.AppendLine();   // message must end with newline
             }
             return message.ToString();
         }
